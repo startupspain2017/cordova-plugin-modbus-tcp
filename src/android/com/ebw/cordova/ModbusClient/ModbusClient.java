@@ -26,7 +26,7 @@ import java.util.List;
 
 public class ModbusClient {
     private Socket tcpClientSocket = new Socket();
-    protected String ipAddress = "190.201.100.100";
+    protected String ipAddress = "192.168.1.137";
     protected int port = 502;
     private byte[] transactionIdentifier = new byte[2];
     private byte[] protocolIdentifier = new byte[2];
