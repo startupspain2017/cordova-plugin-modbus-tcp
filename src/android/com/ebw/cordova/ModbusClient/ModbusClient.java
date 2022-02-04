@@ -527,8 +527,8 @@ public class ModbusClient {
         }
     }
 
-    public void WriteMultipleCoils(int startingAddress, boolean[] values) throws ModbusException, UnknownHostException, SocketException, IOException {
-        byte byteCount = (byte)(values.length / 8 + 1);
+    public void WriteMultipleCoils(int startingAddress, boolean[] values) /*throws ModbusException, UnknownHostException, SocketException, IOException*/ {
+        /*byte byteCount = (byte)(values.length / 8 + 1);
         byte[] quantityOfOutputs = ModbusClient.toByteArray(values.length);
         int singleCoilValue = 0;
         if (this.tcpClientSocket == null & !this.udpFlag) {
@@ -602,7 +602,7 @@ public class ModbusClient {
         }
         if (data[7] == 143 & data[8] == 4) {
             throw new ModbusException("error reading");
-        }
+        }*/
     }
 
     public void WriteMultipleRegisters(int startingAddress, int[] values) throws ModbusException, UnknownHostException, SocketException, IOException {
